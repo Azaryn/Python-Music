@@ -6,9 +6,9 @@ import os
 os.system('cls')
 
 pygame.mixer.init()
-music_file = 'die with a smile.MP3'
+music = 'die with a smile.MP3'
 
-pygame.mixer.music.load(music_file)
+pygame.mixer.music.load(music)
 
 pygame.mixer.music.play()
 
@@ -30,8 +30,8 @@ phrases = [
     "I'd wanna be next to you"
 ]
 
-default_speed = 0.067
-default_word_delay = 0.3
+anu = 0.067
+nganu= 0.3
 
 def print_word(word, speed):
     if word.lower() == "wanna":
@@ -44,8 +44,8 @@ def print_word(word, speed):
             sys.stdout.write(char)
             sys.stdout.flush()
             time.sleep(speed)
-        for dot in "...":
-            sys.stdout.write(dot)
+        for titik in "...":
+            sys.stdout.write(titik)
             sys.stdout.flush()
             time.sleep(3.0 / 3)
         return
@@ -59,10 +59,10 @@ def print_word(word, speed):
 for i, phrase in enumerate(phrases):
     words = phrase.split()
     for word in words:
-        print_word(word, default_speed)
+        print_word(word, anu)
         sys.stdout.write(' ')
         sys.stdout.flush()
-        time.sleep(default_word_delay)
+        time.sleep(nganu)
     print()
     if phrase == "I'd wanna hold you just for a while":
         time.sleep(0.7)
